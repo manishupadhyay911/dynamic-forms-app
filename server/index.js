@@ -16,7 +16,7 @@ const dbConfig = {
   host: process.env.HOST,
   user: process.env.USER,
   password: process.env.PASSWORD,
-  database: 'dynamic_forms_db',
+  database: 'defaultdb',
 };
 
 const getDBConnection = async () => {
@@ -63,6 +63,7 @@ app.post('/submitForm', async (req, res) => {
     await connection.end();
     res.send({ message: 'Form data saved successfully!' });
   } catch (err) {
+    console.log(err);
     res.status(500).send(err);
   }
 });
