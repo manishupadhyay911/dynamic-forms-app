@@ -40,7 +40,7 @@ if (process.env.NODE_ENV === "production") {
 
 // Google Sheets API setup
 const SCOPES = ['https://www.googleapis.com/auth/spreadsheets'];
-const KEYFILEPATH = path.join(__dirname, '/secrets.json');
+const KEYFILEPATH = path.join(__dirname, '/etc/secrets/secrets.json');
 const SPREADSHEET_ID = process.env.SHEET_ID;
 
 // Load client secrets from a local file.
