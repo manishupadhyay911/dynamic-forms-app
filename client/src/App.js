@@ -12,7 +12,7 @@ function App() {
   const handleSubmit = async (e) => {
     e.preventDefault();
       try {
-        await axios.get('/refreshData');
+        await axios.get('https://dynamic-forms-app.onrender.com/refreshData');
         alert('Google Sheet Refreshed successfully');
       } catch (error) {
         console.error('Error Refreshing sheet', error);

@@ -34,7 +34,7 @@ function Form() {
     const formErrors = validate();
     if (Object.keys(formErrors).length === 0) {
       try {
-        await axios.post('/submitForm', { formType, name, countryCode, phoneNumber });
+        await axios.post('https://dynamic-forms-app.onrender.com/submitForm', { formType, name, countryCode, phoneNumber });
         localStorage.setItem('formData', JSON.stringify({ name, countryCode, phoneNumber }));
         alert('Form submitted successfully');
       } catch (error) {
