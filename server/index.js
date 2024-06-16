@@ -12,9 +12,9 @@ app.use(bodyParser.json());
 
 // Database connection
 const dbConfig = {
-  host: 'localhost',
-  user: 'root',
-  password: 'password',
+  host: process.env.HOST,
+  user: process.env.USER,
+  password: process.env.PASSWORD,
   database: 'dynamic_forms_db',
 };
 
