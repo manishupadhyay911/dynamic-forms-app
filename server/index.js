@@ -17,6 +17,10 @@ const dbConfig = {
   user: process.env.USER,
   password: process.env.PASSWORD,
   database: 'defaultdb',
+  port: 24184,
+  ssl: {
+    rejectUnauthorized: true, // Adjust if needed
+  },
 };
 
 const getDBConnection = async () => {
