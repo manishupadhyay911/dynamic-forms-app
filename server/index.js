@@ -4,10 +4,11 @@ const mysql = require('mysql2/promise');
 const { google } = require('googleapis');
 const fs = require('fs');
 const path = require('path');
+const cors = require('cors');
 const dotenv = require('dotenv').config();
 const app = express();
 const port = 5000;
-
+app.use(cors());
 app.use(bodyParser.json());
 
 // Database connection
